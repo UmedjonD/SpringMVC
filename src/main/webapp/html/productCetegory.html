@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title> 
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+<body>
+    <!-- мое ммя и кнопка для выхода -->
+    <div class="myname">
+        <h5>Давлатов Умеджон</h5>               
+    </div>
+    <div class="exit">
+            <input type="button" value="выход" onclick="javascript:window.location='autorization.html'">
+    </div>
+    <div class="books">
+        <h3>Books</h3> 
+        <hr>       
+    </div>
+
+    <!-- Корзина -->
+    
+
+    <div class="search">
+
+        <input type="text" placeholder="поиск..." autocomplete="off" id = "qq">
+        
+        <div id="zatemnenie2">
+            <div id="okno2">
+                <div class="hhhh"><a href="#" class="close"><b>X</b></a></div>
+
+                <div class="inserach">ПОИСК</div><hr><br>
+                <input id="inserch2" type="text" width="20%"/><br><br>
+                <button type="submit">найти</button>
+            </div>
+    </div>
+
+        <a href="#zatemnenie2">
+            <input type="submit" value="искать">
+        </a>
+
+
+        <div id="zatemnenie">
+                <div id="okno">
+                        <div class="hhhh">Закрыть
+                    <a href="#" class="close"><b>X</b></a>
+                    </div>
+
+                    <div id="okno_elements">
+                        <table id="okno_elements_table" style="width:100%" cellspacing="0"></table>
+                    </div>
+                                  
+                    <div id="suka">Сумма:</div>
+                    <div id="summa">0</div>
+                    <div id="blyat">Скидка:</div>
+                    <div id="skidka">0</div>
+                    <div id="nahoi">Итого:</div>
+                    <div id="itogo">0</div>
+                </div>
+        </div>
+
+        <a href="#zatemnenie">
+            <input type="submit" value="Корзина">
+            <span id="count">0</span>
+        </a>
+    
+
+    </div>
+    <br>
+    <!-- Отсюда книги -->
+    <p>Рады приветствовать <span>Вас</span> в нашем книжном интернет магазине. Здесь Вы найдете огромное количество интереснейших книжных изданий</p>
+    <div class="img">
+
+        
+            <div id="viewed"></div>
+
+            <div class="product">
+                <div class="photo"><img src="https://i.pinimg.com/736x/46/3e/65/463e652c3397bb53fa7f04593451052a.jpg" ></div>
+                <div class="name-item">Ideal Prohrammer</div> 
+            </div>
+            
+            <div class="product_detail">
+                <table style="width: 100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                            
+                                <img src="https://i.pinimg.com/736x/46/3e/65/463e652c3397bb53fa7f04593451052a.jpg">
+                            </td>
+                            <td>
+                                    <div class="name"><b>Идеальный программист</b></div> 
+                            </td>
+                            <td>
+                            
+                                    год: 2007<br>
+                                    автор: Умед Ф.
+                            </td>
+                            <td>
+                                <div class="price">450$</div>
+                            </td>
+                            <td>
+                                <input class="add" type="button" value="Положить в корзину">
+                            </td>
+                        </tr>
+                        </tbody>
+                </table>
+            </div>
+       
+
+        <div class="product" onclick="product1(this);">
+           <div> <img src="https://proglib.io/wp-content/uploads/-000//1/1012145650.jpg" ></div>
+           <div class="name-item">Изучаем Java</div>
+          
+        </div>
+
+        <div class="product_detail">
+            <table style="width: 100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="https://proglib.io/wp-content/uploads/-000//1/1012145650.jpg" >
+        
+                        </td>
+                        <td>
+                                <div class="name"><b>Изучаем Java</b></div> 
+                        </td>
+                        <td>
+                           
+                                   год: 2007<br>
+                                   автор: Умед Ф.
+                        </td>
+                        <td>
+                                <div class="price">450$</div>
+                        </td>
+                        <td>
+                                <div class="add"> <input type="button" value="Положить в корзину"></div>
+                        </td>
+                    </tr>
+                    </tbody>
+            </table>
+         </div>
+        
+
+        <div class="product" onclick="product1(this);">
+            <div><img src="https://im0-tub-ru.yandex.net/i?id=dcb80408c07a91e7a73facdda26eae50-l&n=13" ></div>
+            <div class="name-item">Учебник по С++</div>
+        </div>
+
+        <div class="product_detail">
+            <table style="width: 100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="https://im0-tub-ru.yandex.net/i?id=dcb80408c07a91e7a73facdda26eae50-l&n=13" >
+        
+                        </td>
+                        <td>
+                                <div class="name"><b>Учебник по С++</b></div> 
+                        </td>
+                        <td>
+                           
+                                   год: 2007<br>
+                                   автор: Умед Ф.
+                        </td>
+                        <td>
+                                <div class="price">450$</div>
+                        </td>
+                        <td>
+                                <div class="add"> <input type="button" value="Положить в корзину"></div>
+                        </td>
+                    </tr>
+                    </tbody>
+            </table>
+         </div>
+        
+
+        <div class="product" onclick="product1(this);">
+            <div> <img src="https://book24.kz/upload/iblock/ad1/ad111aaa518859b03952bca3c71d461a.jpg" ></div>
+            <div class="name-item">Java</div>
+        </div>
+
+        <div class="product_detail">
+            <table style="width: 100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="https://book24.kz/upload/iblock/ad1/ad111aaa518859b03952bca3c71d461a.jpg" >
+        
+                        </td>
+                        <td>
+                                <div class="name"><b>Java</b></div> 
+                        </td>
+                        <td>
+                           
+                                   год: 2007<br>
+                                   автор: Умед Ф.
+                        </td>
+                        <td>
+                                <div class="price">400$</div>
+                        </td>
+                        <td>
+                                <div class="add"> <input type="button" value="Положить в корзину"></div>
+                        </td>
+                    </tr>
+                    </tbody>
+            </table>
+         </div>
+
+        <div class="product" onclick="product1(this);">
+            <img src="http://www.williamspublishing.com/Books/thumb/big/978-5-8459-2070-6.jpg" >
+            <div class="name-item">Алгоритмы на С++</div>
+        </div>
+
+        <div class="product_detail">
+            <table style="width: 100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="http://www.williamspublishing.com/Books/thumb/big/978-5-8459-2070-6.jpg"  >
+        
+                        </td>
+                        <td>
+                                <div class="name"><b>Алгоритмы на С++</b></div> 
+                        </td>
+                        <td>
+                           
+                                   год: 2007<br>
+                                   автор: Умед Ф.
+                        </td>
+                        <td>
+                                <div class="price">450$</div>
+                        </td>
+                        <td>
+                                <div class="add"> <input type="button" value="Положить в корзину"></div>
+                        </td>
+                    </tr>
+                    </tbody>
+            </table>
+         </div>
+
+        <div class="product" onclick="product1(this);">
+            <img src="https://ozon-st.cdn.ngenix.net/multimedia/1019616360.jpg" id="5" alt="">
+            <div class="name-item">PHP</div>
+        </div>
+
+        <div class="product_detail">
+            <table style="width: 100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="https://ozon-st.cdn.ngenix.net/multimedia/1019616360.jpg" >
+        
+                        </td>
+                        <td>
+                                <div class="name"><b>PHP</b></div> 
+                        </td>
+                        <td>
+                           
+                                   год: 2007<br>
+                                   автор: Умед Ф.
+                        </td>
+                        <td>
+                                <div class="price">450$</div>
+                        </td>
+                        <td>
+                                <div class="add"> <input type="button" value="Положить в корзину"></div>
+                        </td>
+                    </tr>
+                    </tbody>
+            </table>
+         </div>
+
+        <div class="product" onclick="product1(this);">
+            <img src="http://bookash.pro/b/29/yazyk-programmirovaniya-C-klassika-Computers-Science-anders-heilsberg.jpg" >
+            <div class="name-item">Язык С#</div>
+        </div>
+
+        <div class="product_detail">
+            <table style="width: 100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="http://bookash.pro/b/29/yazyk-programmirovaniya-C-klassika-Computers-Science-anders-heilsberg.jpg">
+        
+                        </td>
+                        <td>
+                                <div class="name"><b>Язык С#</b></div> 
+                        </td>
+                        <td>
+                           
+                                   год: 2007<br>
+                                   автор: Умед Ф.
+                        </td>
+                        <td>
+                                <div class="price">450$</div>
+                        </td>
+                        <td>
+                                <div class="add"> <input type="button" value="Положить в корзину"></div>
+                        </td>
+                    </tr>
+                    </tbody>
+            </table>
+         </div>
+
+
+        <div class="product" onclick="product1(this);">
+            <img src="https://ozon-st.cdn.ngenix.net/multimedia/1019616360.jpg" id="7" alt="">
+            <div class="name-item">PHP</div>
+        </div>
+
+        <div class="product_detail">
+            <table style="width: 100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="https://ozon-st.cdn.ngenix.net/multimedia/1019616360.jpg" >
+        
+                        </td>
+                        <td>
+                                <div class="name"><b>PHP</b></div> 
+                        </td>
+                        <td>
+                           
+                                   год: 2007<br>
+                                   автор: Умед Ф.
+                        </td>
+                        <td>
+                                <div class="price">450$</div>
+                        </td>
+                        <td>
+                                <div class="add"> <input type="button" value="Положить в корзину"></div>
+                        </td>
+                    </tr>
+                    </tbody>
+            </table>
+         </div>
+
+        <div class="product" onclick="product1(this);">
+            <img src="http://avidreaders.ru/pics/0/2/131902.jpeg" id="8" alt="">
+            <div class="name-item">Основы П-я</div>
+        </div>
+
+        <div class="product_detail">
+            <table style="width: 100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="http://avidreaders.ru/pics/0/2/131902.jpeg">
+        
+                        </td>
+                        <td>
+                                <div class="name"><b>Основы Программирования</b></div> 
+                        </td>
+                        <td>
+                           
+                                   год: 2007<br>
+                                   автор: Умед Ф.
+                        </td>
+                        <td>
+                                <div class="price">450$</div>
+                        </td>
+                        <td>
+                                <div class="add"> <input type="button" value="Положить в корзину"></div>
+                        </td>
+                    </tr>
+                    </tbody>
+            </table>
+         </div>
+
+        <div class="product" onclick="product1(this);">
+            <img src="https://cdn.tproger.ru/wp-content/uploads/2016/03/1ee3bb3aa317170484be69b8c43b997f-240x280.jpg">
+            <div class="name-item">Javascript</div>
+        </div>
+
+        <div class="product_detail">
+            <table style="width: 100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="https://cdn.tproger.ru/wp-content/uploads/2016/03/1ee3bb3aa317170484be69b8c43b997f-240x280.jpg">
+        
+                        </td>
+                        <td>
+                                <div class="name"><b>Javascript</b></div> 
+                        </td>
+                        <td>
+                           
+                                   год: 2007<br>
+                                   автор: Умед Ф.
+                        </td>
+                        <td>
+                                <div class="price">450$</div>
+                        </td>
+                        <td>
+                                <div class="add"> <input type="button" value="Положить в корзину"></div>
+                        </td>
+                    </tr>
+                    </tbody>
+            </table>
+         </div>
+
+        <div class="product" onclick="product1(this);">
+            <img src="https://i.pinimg.com/736x/46/3e/65/463e652c3397bb53fa7f04593451052a.jpg">
+            <div class="name-item">Ideal programmer</div>
+        </div>
+
+        <div class="product_detail">
+            <table style="width: 100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="https://i.pinimg.com/736x/46/3e/65/463e652c3397bb53fa7f04593451052a.jpg" >
+        
+                        </td>
+                        <td>
+                                <div class="name"><b>Ideal programmer</b></div> 
+                        </td>
+                        <td>
+                           
+                                   год: 2007<br>
+                                   автор: Умед Ф.
+                        </td>
+                        <td>
+                                <div class="price">450$</div>
+                        </td>
+                        <td>
+                                <div class="add"> <input type="button" value="Положить в корзину"></div>
+                        </td>
+                    </tr>
+                    </tbody>
+            </table>
+         </div>
+
+        <div class="product" onclick="product1(this);">
+            <img src="https://proglib.io/wp-content/uploads/-000//1/1012145650.jpg" id="11" alt="">
+            <div class="name-item">Learn Java</div>
+        </div>
+
+        <div class="product_detail">
+            <table style="width: 100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="https://proglib.io/wp-content/uploads/-000//1/1012145650.jpg" >
+        
+                        </td>
+                        <td>
+                                <div class="name"><b>Learn Java</b></div> 
+                        </td>
+                        <td>
+                           
+                                   год: 2007<br>
+                                   автор: Умед Ф.
+                        </td>
+                        <td>
+                                <div class="price">450$</div>
+                        </td>
+                        <td>
+                                <div class="add"> <input type="button" value="Положить в корзину"></div>
+                        </td>
+                    </tr>
+                    </tbody>
+            </table>
+         </div>
+
+        <div class="product" onclick="product1(this);">
+            <img src="https://im0-tub-ru.yandex.net/i?id=dcb80408c07a91e7a73facdda26eae50-l&n=13" id="12" alt="">
+            <div class="name-item">Learn Java</div>
+        </div>
+
+        <div class="product_detail">
+            <table style="width: 100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="https://im0-tub-ru.yandex.net/i?id=dcb80408c07a91e7a73facdda26eae50-l&n=13" >
+        
+                        </td>
+                        <td>
+                                <div class="name"><b>Learn Java</b></div> 
+                        </td>
+                        <td>
+                           
+                                   год: 2007<br>
+                                   автор: Умед Ф.
+                        </td>
+                        <td>
+                                <div class="price">450$</div>
+                        </td>
+                        <td>
+                                <div class="add"> <input type="button" value="Положить в корзину"></div>
+                        </td>
+                    </tr>
+                    </tbody>
+            </table>
+         </div>
+
+
+        <div class="product" onclick="product1(this);">
+            <img src="https://book24.kz/upload/iblock/ad1/ad111aaa518859b03952bca3c71d461a.jpg" id="13" alt="">
+            <div class="name-item">Learn Java</div>
+
+        </div>
+        
+            <div class="product_detail">
+                <table style="width: 100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="https://book24.kz/upload/iblock/ad1/ad111aaa518859b03952bca3c71d461a.jpg" >
+            
+                            </td>
+                            <td>
+                                    <div class="name"><b>Learn Java</b></div> 
+                            </td>
+                            <td>
+                               
+                                       год: 2007<br>
+                                       автор: Умед Ф.
+                            </td>
+                            <td>
+                                    <div class="price">450$</div>
+                            </td>
+                            <td>
+                                    <div class="add"> <input type="button" value="Положить в корзину"></div>
+                            </td>
+                        </tr>
+                        </tbody>
+                </table>
+             </div>
+       
+
+        <div class="product" onclick="product1(this);">
+            <img src="http://www.williamspublishing.com/Books/thumb/big/978-5-8459-2070-6.jpg" >
+            <div class="name-item">Learn Java</div>
+
+        </div>
+
+        <div class="product_detail">
+            <table style="width: 100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="http://www.williamspublishing.com/Books/thumb/big/978-5-8459-2070-6.jpg" >
+        
+                        </td>
+                        <td>
+                                <div class="name"><b>Learn Java</b></div> 
+                        </td>
+                        <td>
+                           
+                                   год: 2007<br>
+                                   автор: Умед Ф.
+                        </td>
+                        <td>
+                                <div class="price">450$</div>
+                        </td>
+                        <td>
+                                <div class="add"> <input type="button" value="Положить в корзину"></div>
+                        </td>
+                    </tr>
+                    </tbody>
+            </table>
+         </div>
+
+  
+
+        <div class="product" onclick="product1(this);">
+            <img src="https://ozon-st.cdn.ngenix.net/multimedia/1019616360.jpg" >
+            <div class="name-item">Learn Java</div>
+        </div>
+
+        <div class="product_detail">
+            <table style="width: 100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="https://ozon-st.cdn.ngenix.net/multimedia/1019616360.jpg" >
+        
+                        </td>
+                        <td>
+                                <div class="name"><b>Learn Java</b></div> 
+                        </td>
+                        <td>
+                           
+                                   год: 2007<br>
+                                   автор: Умед Ф.
+                        </td>
+                        <td>
+                                <div class="price">450$</div>
+                        </td>
+                        <td>
+                                <div class="add"> <input type="button" value="Положить в корзину"></div>
+                        </td>
+                    </tr>
+                    </tbody>
+            </table>
+         </div>
+
+    </div>
+
+    <!--  -->
+    <br>
+    <div class="categories2"><b>Категория Фентези</b></div>
+
+    <div class="product" onclick="product1(this);">
+        <img src="https://cdn.eksmo.ru/v2/ITD000000000895639/COVER/cover1__w220.jpg" >
+        <div class="name-item">Irka Khortisa</div>
+    </div>
+
+    <div class="product_detail">
+        <table style="width: 100%">
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="https://cdn.eksmo.ru/v2/ITD000000000895639/COVER/cover1__w220.jpg" >
+    
+                    </td>
+                    <td>
+                            <div class="name"><b>Learn Java</b></div> 
+                    </td>
+                    <td>
+                       
+                               год: 2007<br>
+                               автор: Умед Ф.
+                    </td>
+                    <td>
+                            <div class="price">40$</div>
+                    </td>
+                    <td>
+                            <div class="add"> <input type="button" value="Положить в корзину"></div>
+                    </td>
+                </tr>
+                </tbody>
+        </table>
+     </div>
+    
+    <div class="product" onclick="product1(this);">
+        <img src="https://i.pinimg.com/originals/87/e7/4f/87e74f2d9ff647eeb71a2573f238ceb2.jpg" >
+        <div class="name-item">Opasno</div>
+    </div>
+
+    <div class="product_detail">
+        <table style="width: 100%">
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="https://i.pinimg.com/originals/87/e7/4f/87e74f2d9ff647eeb71a2573f238ceb2.jpg" >
+    
+                    </td>
+                    <td>
+                            <div class="name"><b>Learn Java</b></div> 
+                    </td>
+                    <td>
+                       
+                               год: 2007<br>
+                               автор: Умед Ф.
+                    </td>
+                    <td>
+                            <div class="price">40$</div>
+                    </td>
+                    <td>
+                            <div class="add"> <input type="button" value="Положить в корзину"></div>
+                    </td>
+                </tr>
+                </tbody>
+        </table>
+     </div>
+
+    <div class="product" onclick="product1(this);">
+        <img src="http://samlib.ru/img/s/sychewa_anastasija_wiktorowna/chasperedrassvetom/chperasv7759.jpg" >
+        <div class="name-item">Derzki</div>
+    </div>
+
+    <div class="product_detail">
+        <table style="width: 100%">
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="http://samlib.ru/img/s/sychewa_anastasija_wiktorowna/chasperedrassvetom/chperasv7759.jpg" >
+    
+                    </td>
+                    <td>
+                            <div class="name"><b>Learn Java</b></div> 
+                    </td>
+                    <td>
+                       
+                               год: 2007<br>
+                               автор: Умед Ф.
+                    </td>
+                    <td>
+                            <div class="price">40$</div>
+                    </td>
+                    <td>
+                            <div class="add"> <input type="button" value="Положить в корзину"></div>
+                    </td>
+                </tr>
+                </tbody>
+        </table>
+     </div>
+
+    <div class="product" onclick="product1(this);">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxGUz1UJKvKlRxtObZ7KukE-USDz83rRWW_Km2Mwdxc8h2vg1YFQ" >
+        <div class="name-item">Kak pulya</div>
+    </div>
+
+    <div class="product_detail">
+        <table style="width: 100%">
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxGUz1UJKvKlRxtObZ7KukE-USDz83rRWW_Km2Mwdxc8h2vg1YFQ" >
+    
+                    </td>
+                    <td>
+                            <div class="name"><b>Learn Java</b></div> 
+                    </td>
+                    <td>
+                       
+                               год: 2007<br>
+                               автор: Умед Ф.
+                    </td>
+                    <td>
+                            <div class="price">40$</div>
+                    </td>
+                    <td>
+                            <div class="add"> <input type="button" value="Положить в корзину"></div>
+                    </td>
+                </tr>
+                </tbody>
+        </table>
+     </div>
+
+    <div class="product" onclick="product1(this);">
+        <img src="http://pooha.net/images/fantasy-books-7.jpg" >
+        <div class="name-item">Rezki</div>
+    </div>
+
+    <div class="product_detail">
+        <table style="width: 100%">
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="http://pooha.net/images/fantasy-books-7.jpg" >
+    
+                    </td>
+                    <td>
+                            <div class="name"><b>Learn Java</b></div> 
+                    </td>
+                    <td>
+                       
+                               год: 2007<br>
+                               автор: Умед Ф.
+                    </td>
+                    <td>
+                            <div class="price">40$</div>
+                    </td>
+                    <td>
+                            <div class="add"> <input type="button" value="Положить в корзину"></div>
+                    </td>
+                </tr>
+                </tbody>
+        </table>
+     </div>
+
+    <div class="product" onclick="product1(this);">
+        <img src="https://cs8.pikabu.ru/post_img/2016/10/03/5/14754813942919801.jpg" >
+        <div class="name-item">Svoi</div>
+    </div>
+
+    <div class="product_detail">
+        <table style="width: 100%">
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="https://cs8.pikabu.ru/post_img/2016/10/03/5/14754813942919801.jpg" >
+    
+                    </td>
+                    <td>
+                            <div class="name"><b>Learn Java</b></div> 
+                    </td>
+                    <td>
+                       
+                               год: 2007<br>
+                               автор: Умед Ф.
+                    </td>
+                    <td>
+                            <div class="price">40$</div>
+                    </td>
+                    <td>
+                            <div class="add"> <input type="button" value="Положить в корзину"></div>
+                    </td>
+                </tr>
+                </tbody>
+        </table>
+     </div>
+
+    <div class="product" onclick="product1(this);">
+        <img src="https://i.pinimg.com/originals/87/e7/4f/87e74f2d9ff647eeb71a2573f238ceb2.jpg" >
+        <div class="name-item">Galina</div>
+    </div>
+
+    <div class="product_detail">
+        <table style="width: 100%">
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="https://i.pinimg.com/originals/87/e7/4f/87e74f2d9ff647eeb71a2573f238ceb2.jpg" >
+    
+                    </td>
+                    <td>
+                            <div class="name"><b>Learn Java</b></div> 
+                    </td>
+                    <td>
+                       
+                               год: 2007<br>
+                               автор: Умед Ф.
+                    </td>
+                    <td>
+                            <div class="price">40$</div>
+                    </td>
+                    <td>
+                            <div class="add"> <input type="button" value="Положить в корзину"></div>
+                    </td>
+                </tr>
+                </tbody>
+        </table>
+     </div>
+
+    <div class="product" onclick="product1(this);">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtrp0x5kU-Tmi7exgwIy9ISotWD7UvVqEBCxXkR9oEzNH_xD8_" >
+        <div class="name-item">Irka Galina</div>
+    </div>
+
+    <div class="product_detail">
+        <table style="width: 100%">
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtrp0x5kU-Tmi7exgwIy9ISotWD7UvVqEBCxXkR9oEzNH_xD8_" >
+    
+                    </td>
+                    <td>
+                            <div class="name"><b>Learn Java</b></div> 
+                    </td>
+                    <td>
+                       
+                               год: 2007<br>
+                               автор: Умед Ф.
+                    </td>
+                    <td>
+                            <div class="price">40$</div>
+                    </td>
+                    <td>
+                            <div class="add"> <input type="button" value="Положить в корзину"></div>
+                    </td>
+                </tr>
+                </tbody>
+        </table>
+     </div>
+
+    <div class="product" onclick="product1(this);">
+        <img src="http://www.knor.ru/shop/pictb/25/06/2506141.jpg" >
+        <div class="name-item">Goals</div>
+    </div>
+
+    <div class="product_detail">
+        <table style="width: 100%">
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="http://www.knor.ru/shop/pictb/25/06/2506141.jpg" >
+    
+                    </td>
+                    <td>
+                            <div class="name"><b>Learn Java</b></div> 
+                    </td>
+                    <td>
+                       
+                               год: 2007<br>
+                               автор: Умед Ф.
+                    </td>
+                    <td>
+                            <div class="price">40$</div>
+                    </td>
+                    <td>
+                            <div class="add"> <input type="button" value="Положить в корзину"></div>
+                    </td>
+                </tr>
+                </tbody>
+        </table>
+     </div>
+
+    <script src="jquery.min.js"></script>
+    <script src="script.js"></script>
+   
+
+</body>
+
+</html>

@@ -1,0 +1,269 @@
+html {
+    background: Aqua;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+#insearch2 {
+    height: 50px;
+}
+.insearch {
+    widows: 10%;
+}
+.hhhh {
+    text-align: end;
+}
+.books {
+    /* display: flex;  */
+    position: fixed;
+    text-align: center;
+    color: rgb(2, 2, 2);
+    width: 100%;
+    height: 10px;
+    /* font-weight: 800; жирный */
+    /* padding: 10px; */
+    /* margin: 10px; */
+}
+.myname{
+    position: fixed;
+    position: relative;
+    justify-content: flex-start;
+    color: rgb(2, 2, 2);
+    width: 100%;
+    height: 0px;
+    top: 3px;
+}
+.exit {
+    display:  fixed;
+    /* position: relative; */
+    color: rgb(4, 4, 4);
+    /* width: 90%; */
+    margin-left: 140px;
+    height: 0px;
+}
+.knopka1 {
+    width: 100%;
+
+}
+p {
+    color: #666;
+    font-weight: 750; /*жирный*/
+    background: orange;
+    padding: 15px;
+    margin: 25px;
+}
+span {
+    color: white;
+    background: orange;
+}
+.img {
+    /* border: 1px solid red; */
+}
+.product img {
+    width: 100%;
+    height: 250px;
+}
+
+.product_detail img {
+    width: 200px;
+    height: 250px;
+}
+
+.product_detail  {
+    display: none;
+    border: 1px solid blue;
+    background: olive;
+    /* display: block; */
+    width: 100%;
+    margin: 10px;
+}
+.product {
+    /* display: none; */
+    border: 1px solid blue;
+    background: olive;
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+  
+}
+/* .photo{
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid #333;
+    padding: 5px;
+    margin: 4px 0 5px 5px;
+    background: #f0f0f0;
+} */
+/* .photo .name-item{
+    margin: 0 auto 5px;
+} */
+.name-item {
+    border: 1px solid white;
+    display: flex;
+    position: relative;
+    margin: 10%
+}
+.parametr{
+    display: none;
+    position: relative;
+    margin: 10%
+}
+.pkorzina {
+    border: 1px solid orchid;
+    display: none;
+    position: relative;
+    margin: 5%;
+    
+}
+#qq {
+    /* -webkit-appearance: none; */
+    outline: none;
+    border: none;
+    width: 200px;
+    padding: 2px 2px;
+}
+/* отсюда регистрация */
+.myform {
+    display: flex;
+	background-color:rgb(225, 230, 252);
+	width:500px;
+	height:300px;
+	margin-left:300px;
+	margin-top:150px;
+	text-align:center;
+}
+form{
+    width: 95%;
+}
+.contener {
+    display: flex;
+	background-color:#858181;
+	margin:auto;
+	width:1100px;
+	height:600px;
+	border: 3px solid rgb(15, 15, 15);
+}
+.digblocform {
+	width:50%;
+	height:100%;
+    float:left;
+}
+/* стиль для карзины */
+.search{
+    display: flex;
+    justify-content: flex-end;
+    position: relative; 
+    height: 20px;
+}
+
+#zatemnenie, #zatemnenie2 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 100;
+  }
+  #okno, #okno2 {
+    border: 1px solid rgb(94, 28, 248);      
+    width: 800px;
+    height:600px;
+    text-align: center;
+    padding: 15px;
+    border: 3px solid #0000cc;
+    border-radius: 10px;
+    color: #0000cc;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 10%;
+    left: 10%;
+    background: #fff;
+  }
+
+  #okno_elements {
+    height:350px;
+    overflow: scroll;
+  }
+ #zatemnenie:target,  #zatemnenie2:target {display: block;}
+  .close {
+    display: inline-block;
+    border: 1px solid #0000cc;
+    color: #0000cc;
+    padding: 0 12px;
+    margin: 14px;
+    text-decoration: none;
+    background: #f2f2f2;
+    font-size: 15pt;
+    cursor:pointer; 
+   }
+.inSearch {
+    position: fixed;
+    left: 40%;
+    margin: 100px
+} 
+.inbutton {
+    position: fixed;
+    left: 50%;
+    margin: 100px
+}
+
+#okno_elements {
+    text-align: left;
+}
+
+#okno_elements img {
+    width: 120px;
+}
+#summa {
+    width: 18%;
+}
+#suka {
+    width: 15%;
+}
+#skidka {
+    width: 18%;
+}
+#blyat{
+    width: 15%;
+}
+#itogo {
+    width: 18%;
+}
+#nahoi{
+    width: 15%;
+}
+.nameK {
+    width: 100%;
+}
+.priceK {
+    width: 100%;
+}
+.in_korzina {
+    border: 1px solid rgb(28, 248, 65);
+    background: #666;      
+}
+.categories2 {
+    background: #f2f2f2;
+    border: 1px solid rgb(201, 186, 235); 
+    position: fixed;
+    position: relative;
+    text-align: center;
+}
+
+#okno_elements_table tr {
+    background-color: #8aa48e;
+}
+
+#okno_elements_table tr td {
+    border-bottom: 5px solid #ffffff;
+}
+label .error {
+    display: block;
+}
