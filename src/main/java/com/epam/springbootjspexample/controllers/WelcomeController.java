@@ -3,7 +3,9 @@ package com.epam.springbootjspexample.controllers;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Date;
 import java.util.Map;
@@ -11,19 +13,23 @@ import java.util.Map;
 @Controller
 public class WelcomeController {
 
-    @Value("${application.message:Hello World}")
-    private String message = "Hello World";
-
     @GetMapping("/")
-    public String welcome(Map<String, Object> model) {
-        model.put("time", new Date());
-        model.put("message", this.message);
-        return "welcome";
+    public String welcome() {
+        return "index";
     }
-
-    @RequestMapping("/foo")
-    public String foo(Map<String, Object> model) {
-        throw new RuntimeException("Foo");
+    @GetMapping("/login")
+    public String welcome2() {
+        return "index";
     }
-
+//    @GetMapping("/")
+//    private ModelAndView homeGet(ModelAndView modelAndView) {
+//        modelAndView.setViewName("redirect:index");
+//        return modelAndView;
+//    }
+//
+//    @PostMapping("/")
+//    private ModelAndView homePost(ModelAndView modelAndView) {
+//        modelAndView.setViewName("redirect:index");
+//        return modelAndView;
+//    }
 }

@@ -19,7 +19,6 @@
     <div class="digblocform">
     <div class="myform">
 
-
         <form action="login" method="post"><br><br>
             Введите email:<br>
             <input type="text" name="firstname">
