@@ -267,3 +267,13 @@ form{
 label .error {
     display: block;
 }
+.pole {
+    border: 1px solid rgb(28, 248, 62);
+    display: block;
+}
+.oformit {
+    border: 1px solid rgb(14, 14, 14);
+    box-sizing: border-box;
+    margin: 35px;
+    float: right;
+}

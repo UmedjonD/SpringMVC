@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Products</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -15,7 +15,6 @@
     <div class="myname">
         <h5>"${user}"</h5>
     </div>
-
     <div class="exit">
             <input type="button" value="выход" onclick="javascript:window.location='autorization.html'">
     </div>
@@ -29,7 +28,7 @@
 
     <div class="search">
 
-        <input type="text" placeholder="поиск..." autocomplete="off" id = "qq">
+        <input type="submit" value="Секретная Кнопка">
 
         <div id="zatemnenie2">
             <div id="okno2">
@@ -46,29 +45,29 @@
         </a>
 
 
-         <div id="zatemnenie">
-                        <div id="okno">
-                                <div class="hhhh">Закрыть
-                            <a href="#" class="close"><b>X</b></a>
-                            </div>
+        <div id="zatemnenie">
+                <div id="okno">
+                        <div class="hhhh">Закрыть
+                    <a href="#" class="close"><b>X</b></a>
+                    </div>
 
-                            <div id="okno_elements">
-                                <table id="okno_elements_table" style="width:100%" cellspacing="0"></table>
-                            </div>
-                            <div class="pole">
-                                <div class="oformit">
-                                    <input class="add" type="button" value="Оформить">
-                                </div>
-
-                                <div id="suka">Сумма:</div>
-                                <div id="summa">0</div>
-                                <div id="blyat">Скидка:</div>
-                                <div id="skidka">0</div>
-                                <div id="nahoi">Итого:</div>
-                                <div id="itogo">0</div>
-                            </div>
+                    <div id="okno_elements">
+                        <table id="okno_elements_table" style="width:100%" cellspacing="0"></table>
+                    </div>
+                    <div class="pole">
+                        <div class="oformit">
+                            <input class="add" type="button" value="Оформить">
                         </div>
+
+                        <div id="suka">Сумма:</div>
+                        <div id="summa">0</div>
+                        <div id="blyat">Скидка:</div>
+                        <div id="skidka">0</div>
+                        <div id="nahoi">Итого:</div>
+                        <div id="itogo">0</div>
+                    </div>
                 </div>
+        </div>
 
         <a href="#zatemnenie">
             <input type="submit" value="Корзина">

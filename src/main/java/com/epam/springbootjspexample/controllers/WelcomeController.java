@@ -21,15 +21,4 @@ public class WelcomeController {
     public String welcome2() {
         return "index";
     }
-//    @GetMapping("/")
-//    private ModelAndView homeGet(ModelAndView modelAndView) {
-//        modelAndView.setViewName("redirect:index");
-//        return modelAndView;
-//    }
-//
-//    @PostMapping("/")
-//    private ModelAndView homePost(ModelAndView modelAndView) {
-//        modelAndView.setViewName("redirect:index");
-//        return modelAndView;
-//    }
 }
