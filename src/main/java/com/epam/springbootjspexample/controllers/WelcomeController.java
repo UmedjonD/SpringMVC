@@ -21,4 +21,9 @@ public class WelcomeController {
     public String welcome2() {
         return "index";
     }
+    @GetMapping("/registration")
+    public String welcome3() {
+        return "registration";
+    }
+
 }

@@ -13,7 +13,7 @@
 <body>
     <!-- мое ммя и кнопка для выхода -->
     <div class="myname">
-        <h5>"${user}"</h5>
+        <h5>"${user.getLogin()}"</h5>
     </div>
 
     <div class="exit">

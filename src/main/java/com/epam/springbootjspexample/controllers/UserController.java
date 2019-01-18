@@ -1,28 +1,34 @@
 package com.epam.springbootjspexample.controllers;
 
 import com.epam.springbootjspexample.dto.User;
+import com.epam.springbootjspexample.enums.Role;
+import com.epam.springbootjspexample.service.ServiceUser;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
-
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
 @Controller
 public class UserController {
 
+    @Autowired
+    private ServiceUser serviceUser;
+
     @PostMapping("/login")
-    public String checkLoginandPassword(HttpServletRequest req) throws IOException, ServletException {
-        String login = req.getParameter("firstname");
-        String password = req.getParameter("password");
-        String res="";
-        if (login.equals("user") && password.equals("123")) {
-            req.setAttribute("user",login);
-            res = "productCategory";
-        } else if ((login.equals("admin") && password.equals("1234"))){
-            req.setAttribute("user",login);
-            res = "productCategoryAdmin";
+    public String checkUserLogin(User user) {
+        String res = "registration";
+        User foundUser = serviceUser.getUserByLogin(user.getLogin());
+        System.out.println(user.getLogin());
+        System.out.println(user.getPassword());
+        System.out.println(foundUser.getPassword());
+        System.out.println(foundUser.getLogin());
+
+        if (foundUser.getPassword().equals(user.getPassword())){
+            if (foundUser.getRole().equals(Role.USER)){
+                res = "productCategory";
+            }
+            if (foundUser.getRole().equals(Role.ADMIN)){
+                res = "productCategoryAdmin";
+            }
         }
         return res;
     }

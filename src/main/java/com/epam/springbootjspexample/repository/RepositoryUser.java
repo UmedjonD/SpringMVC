@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface RepositoryUser {
 
-    void users();
     List<User> getUser();
 
+    User getUserByLogin(String login);
 }

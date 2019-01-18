@@ -8,7 +8,14 @@ import java.util.List;
 
 public interface RepositoryProduct {
 
-    void addproduct(Product product);
-    List<Product> getProducts();
+    void addProduct(Product product);
+
+    void updateProduct(Product product);
+
+    void removeProduct(int id);
+
+    Product getProductById(int id);
+
+    List<Product> listProducts();
 
 }

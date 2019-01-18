@@ -21,7 +21,7 @@
 
         <form action="login" method="post"><br><br>
             Введите email:<br>
-            <input type="text" name="firstname">
+            <input type="text" name="login">
             <br>
             Введите пароль:<br>
             <input type="password" name="password">

@@ -4,13 +4,13 @@ import com.epam.springbootjspexample.enums.Role;
 
 public class User {
     private String login;
-    private int password;
+    private String password;
     private Role role;
 
     public User() {
     }
 
-    public User(String login, int password) {
+    public User(String login, String password) {
         this.login = login;
         this.password = password;
     }
@@ -27,11 +27,11 @@ public class User {
         this.login = login;
     }
 
-    public int getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(int password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 

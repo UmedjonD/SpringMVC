@@ -7,4 +7,5 @@ public interface ServiceUser {
      String addUser(User user);
      String removeUser(User user);
      String editUser(User user);
+     User   getUserByLogin(String login);
 }
