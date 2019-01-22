@@ -85,6 +85,36 @@
 
             <div id="viewed"></div>
 
+        <c:forEach var = "product" items = "${Products}">
+
+                    <div class="product_detail">
+
+                        <table style="width: 100%">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <img src= <c:out value ="${product.getUrl()}"/> alt"">
+
+                                            </td>
+                                            <td>
+                                                    <div class="name"><b><c:out value ="${product.getNameBook()}"/></b></div>
+                                            </td>
+                                            <td>
+
+                                                      <c:out value ="${product.getPrice()}"/>
+                                            </td>
+                                            <td>
+                                                    <div class="price"><c:out value ="${product.getNameBook()}"/></div>
+                                            </td>
+                                            <td>
+                                                    <div class="add"> <input type="button" value="Положить в корзину"></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                        </table>
+                    </div>
+         </c:forEach>
+
             <div class="product">
                 <div class="photo"><img src="https://i.pinimg.com/736x/46/3e/65/463e652c3397bb53fa7f04593451052a.jpg" ></div>
                 <div class="name-item">Ideal Prohrammer</div>
@@ -904,7 +934,6 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/script.js"></script>
-
 
 </body>
 

@@ -17,13 +17,20 @@ public class WelcomeController {
     public String welcome() {
         return "index";
     }
-    @GetMapping("/login")
-    public String welcome2() {
-        return "index";
+//    @GetMapping("/login")
+//    public String welcome2() {
+//        return "index";
+//    }
+//    @GetMapping("/registration")
+//    public String welcome3() {
+//        return "registration";
+//    }
+    @GetMapping("/productCategory")
+    public String welcome4() {
+        return "productCategory";
     }
-    @GetMapping("/registration")
-    public String welcome3() {
-        return "registration";
+    @GetMapping("/productCategoryAdmin")
+    public String welcome5() {
+        return "productCategoryAdmin";
     }
-
 }

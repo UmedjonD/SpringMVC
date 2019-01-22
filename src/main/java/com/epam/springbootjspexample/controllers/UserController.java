@@ -3,6 +3,7 @@ package com.epam.springbootjspexample.controllers;
 import com.epam.springbootjspexample.dto.User;
 import com.epam.springbootjspexample.enums.Role;
 import com.epam.springbootjspexample.service.Impl.SessionUserServiceImpl;
+import com.epam.springbootjspexample.service.ServiceProduct;
 import com.epam.springbootjspexample.service.ServiceUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,37 +16,40 @@ public class UserController {
 
     @Autowired
     private ServiceUser serviceUser;
-    private SessionUserServiceImpl sessionUserService;
+    @Autowired
+    private ServiceProduct serviceProduct;
 
     @PostMapping("/login")
     public String checkUserLogin(User user) {
         String res = "registration";
         User foundUser = serviceUser.getUserByLogin(user.getLogin());
-        System.out.println(user.getLogin());
-        System.out.println(user.getPassword());
-        System.out.println(foundUser.getPassword());
-        System.out.println(foundUser.getLogin());
-
         if (foundUser.getPassword().equals(user.getPassword())){
             if (foundUser.getRole().equals(Role.USER)){
-                res = "productCategory";
+                res = "redirect:productCategory";
             }
             if (foundUser.getRole().equals(Role.ADMIN)){
-                res = "productCategoryAdmin";
+                res = "redirect:productCategoryAdmin";
             }
         }
         return res;
     }
 
-    @GetMapping("login")
-    private ModelAndView client(ModelAndView modelAndView) {
-        modelAndView.setViewName("index");
+    @GetMapping
+    public ModelAndView homePage() {
+        ModelAndView modelAndView = new ModelAndView("productCategory");
+        modelAndView.addObject("Products", serviceProduct.getlistProducts());
         return modelAndView;
     }
 
-    @GetMapping("login/product")
-    private ModelAndView clientbook(ModelAndView modelAndView) {
-        modelAndView.setViewName("productCategory");
-        return modelAndView;
-    }
+//    @GetMapping("login")
+//    private ModelAndView client(ModelAndView modelAndView) {
+//        modelAndView.setViewName("index");
+//        return modelAndView;
+//    }
+//
+//    @GetMapping("login/product")
+//    private ModelAndView clientbook(ModelAndView modelAndView) {
+//        modelAndView.setViewName("productCategory");
+//        return modelAndView;
+//    }
 }

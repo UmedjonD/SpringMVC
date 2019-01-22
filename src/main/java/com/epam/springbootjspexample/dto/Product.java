@@ -4,17 +4,17 @@ public class Product {
 
     private int id;
     private String nameBook;
-    private String nameAuthor;
     private int price;
+    private String urt;
 
     public Product() {
     }
 
-    public Product(int id, String nameBook, String nameAuthor, int price) {
+    public Product(int id, String nameBook, int price, String urt) {
         this.id = id;
         this.nameBook = nameBook;
-        this.nameAuthor = nameAuthor;
         this.price = price;
+        this.urt = urt;
     }
 
     public int getId() {
@@ -33,19 +33,29 @@ public class Product {
         this.nameBook = nameBook;
     }
 
-    public String getNameAuthor() {
-        return nameAuthor;
-    }
-
-    public void setNameAuthor(String nameAuthor) {
-        this.nameAuthor = nameAuthor;
-    }
-
     public int getPrice() {
         return price;
     }
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public String getUrt() {
+        return urt;
+    }
+
+    public void setUrt(String urt) {
+        this.urt = urt;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", nameBook='" + nameBook + '\'' +
+                ", price=" + price +
+                ", urt='" + urt + '\'' +
+                '}';
     }
 }
