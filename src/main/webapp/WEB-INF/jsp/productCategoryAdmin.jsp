@@ -14,9 +14,10 @@
     <!-- мое ммя и кнопка для выхода -->
     <div class="myname">
         <h5>"${user.getLogin()}"</h5>
+        <input type="button" value=" Нажми меня нежно" onclick="javascript:window.location='index'">
     </div>
     <div class="exit">
-            <input type="button" value="выход" onclick="javascript:window.location='autorization.html'">
+            <!--<input type="button" value="выход" onclick="javascript:window.location='autorization.html'">-->
     </div>
     <div class="books">
         <h3>Books</h3>

@@ -1,9 +1,7 @@
 package com.epam.springbootjspexample.repository;
 
 import com.epam.springbootjspexample.dto.Product;
-import com.epam.springbootjspexample.dto.User;
 
-import java.util.LinkedList;
 import java.util.List;
 
 public interface RepositoryProduct {
@@ -14,7 +12,7 @@ public interface RepositoryProduct {
 
     void removeProduct(int id);
 
-    Product getProductById(int id);
+    Product getProductById();
 
     List<Product> listProducts();
 

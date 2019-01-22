@@ -27,7 +27,7 @@ $(function() {
         },
         password2: {
             required: "повторите пароль",
-            minlength: "пароль не должен быть менее 5 символов"  
+            minlength: "пароль не должен быть менее 5 символов"
         },
         email: "введите емайл"
       },
@@ -54,7 +54,7 @@ $('.product_detail .add').on('click', function() {
     let price = detail.find('.price').text();
     let priceInt = parseInt(price);
     let img = detail.find('img').attr('src');
-    
+
     $('#count').text(parseInt($('#count').text()) + 1);
 
     let summa = parseInt($('#summa').text()) + priceInt;
@@ -78,7 +78,7 @@ $('.product_detail .add').on('click', function() {
         let summa = parseInt($('#summa').text()) - priceInt;
         let skidka = Math.ceil(summa * 0.1)
         let itogo = summa - skidka;
-        
+
         $('#summa').text(summa);
         $('#skidka').text(skidka);
         $('#itogo').text(itogo);

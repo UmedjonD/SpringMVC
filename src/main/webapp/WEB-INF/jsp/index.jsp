@@ -29,7 +29,7 @@
              <input type="submit" name="vhod" placeholder="Вход">
             <!-- <input type="button" value="Вход" id="vhod1" onclick="myFunction3()"/>-->
             <br><br>
-            <input type="button" value="Зарегистрироваться" onclick="javascript:window.location='registration.html'">
+            <input type="button" value="Зарегистрироваться" onclick="javascript:window.location='registration'">
             <br>
             <br><br>
         </form>

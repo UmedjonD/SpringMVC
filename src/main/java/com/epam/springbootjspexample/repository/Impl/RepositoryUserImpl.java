@@ -16,6 +16,7 @@ public class RepositoryUserImpl implements RepositoryUser {
     List<User> userList = new ArrayList<>();
 
     public RepositoryUserImpl() {
+
         User admin = new User("admin", "1234");
         admin.setRole(ADMIN);
         User user = new User("user", "123");

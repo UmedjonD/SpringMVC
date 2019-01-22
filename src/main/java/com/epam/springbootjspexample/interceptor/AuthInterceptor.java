@@ -8,25 +8,23 @@ import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.Reader;
 import java.util.Objects;
+
 
 public class AuthInterceptor implements HandlerInterceptor {
 
     @Autowired
     private SessionUserServiceImpl sessionUserService;
 
-    @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
-            throws Exception {
-        User user = sessionUserService.getCurrentSessionUser();
-
-        if (Objects.isNull(user)) {
-            response.sendRedirect("/login");
-            return false;
-        }
-
-        return true;
-    }
-
+//    @Override
+//    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
+//            throws Exception {
+//        User user = sessionUserService.getCurrentSessionUser();
+//
+//        if (Objects.isNull(user)) {
+//            response.sendRedirect("/index");
+//            return false;
+//        }
+//        return true;
+//    }
 }
