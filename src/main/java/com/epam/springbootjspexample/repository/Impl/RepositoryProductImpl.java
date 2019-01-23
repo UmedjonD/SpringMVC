@@ -1,7 +1,6 @@
 package com.epam.springbootjspexample.repository.Impl;
 
 import com.epam.springbootjspexample.dto.Product;
-import com.epam.springbootjspexample.dto.User;
 import com.epam.springbootjspexample.repository.RepositoryProduct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,8 +8,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.epam.springbootjspexample.enums.Role.ADMIN;
 
 @Repository
 public class RepositoryProductImpl implements RepositoryProduct {
@@ -20,7 +17,6 @@ public class RepositoryProductImpl implements RepositoryProduct {
     private List<Product> productList = new ArrayList<>();
 
     public RepositoryProductImpl() {
-
         productList.add(new Product(1,"Java", 450, "https://proglib.io/wp-content/uploads/-000//1/1012145650.jpg"));
         productList.add(new Product(2,"Java", 460, "https://i.pinimg.com/736x/46/3e/65/463e652c3397bb53fa7f04593451052a.jpg"));
         productList.add(new Product(3,"Java", 470, "https://im0-tub-ru.yandex.net/i?id=dcb80408c07a91e7a73facdda26eae50-l&n=13"));
@@ -35,23 +31,26 @@ public class RepositoryProductImpl implements RepositoryProduct {
         productList.add(new Product(13,"Java", 350, "https://i.pinimg.com/736x/46/3e/65/463e652c3397bb53fa7f04593451052a.jpg"));
         productList.add(new Product(14,"Java", 360, "https://im0-tub-ru.yandex.net/i?id=dcb80408c07a91e7a73facdda26eae50-l&n=13"));
         productList.add(new Product(15,"Java", 250, "https://book24.kz/upload/iblock/ad1/ad111aaa518859b03952bca3c71d461a.jpg"));
-
     }
+
     @Override
     public void addProduct(Product product) {
         productList.add(product);
     }
+
     @Override
     public void updateProduct(Product product) {
 
     }
+
     @Override
     public void removeProduct(int id) {
 
     }
+
     @Override
     public Product getProductById() {
-        return  productList.get(10);
+        return null;
     }
     @Override
     public List<Product> listProducts() {

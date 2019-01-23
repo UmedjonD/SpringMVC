@@ -1,6 +1,6 @@
 package com.epam.springbootjspexample.controllers;
 
-import com.epam.springbootjspexample.service.Impl.SessionUserServiceImpl;
+import com.epam.springbootjspexample.service.ServiceProduct;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Value;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,14 +16,10 @@ import java.util.Map;
 public class WelcomeController {
 
     @Autowired
-    private SessionUserServiceImpl sessionUserService;
+    private ServiceProduct serviceProduct;
 
-    @GetMapping("/")
+    @GetMapping(value = {"/","/index","login"})
     public String welcome() {
-        return "index";
-    }
-    @GetMapping("/login")
-    public String welcome2() {
         return "index";
     }
 
@@ -31,14 +27,16 @@ public class WelcomeController {
 //    public String welcome3() {
 //        return "registration";
 //    }
-
     @GetMapping("/productCategory")
-    public String welcome4() {
-        return "productCategory";
+    public ModelAndView welcome4(ModelAndView modelAndView) {
+        modelAndView = new ModelAndView("productCategory");
+        modelAndView.addObject("Products", serviceProduct.getlistProducts());
+        return modelAndView;
     }
     @GetMapping("/productCategoryAdmin")
-    public String welcome5() {
-        return "productCategoryAdmin";
+    public ModelAndView welcome5(ModelAndView modelAndView) {
+    modelAndView = new ModelAndView("productCategoryAdmin");
+        modelAndView.addObject("Products", serviceProduct.getlistProducts());
+        return modelAndView;
     }
-
 }

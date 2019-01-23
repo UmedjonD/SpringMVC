@@ -1,22 +1,25 @@
 package com.epam.springbootjspexample.interceptor;
 
 import com.epam.springbootjspexample.dto.User;
-import com.epam.springbootjspexample.service.Impl.SessionUserServiceImpl;
+import com.epam.springbootjspexample.service.SessionUserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.servlet.HandlerInterceptor;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Objects;
 
-public class UserInterceptor implements HandlerInterceptor {
+public class UserInterceptor extends HandlerInterceptorAdapter {
 
     @Autowired
-    private SessionUserServiceImpl sessionUserService;
-
+    SessionUserService sessionUserService;
     @Override
-    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
-                           ModelAndView modelAndView) throws Exception {
-        User currentUser = sessionUserService.getCurrentSessionUser();
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+//        User foundUser = sessionUserService.getCurrentSessionUser();
+//
+//        if (Objects.nonNull(foundUser)) {
+//            request.setAttribute("user", foundUser);
+//        }
+        return true;
     }
 }

@@ -1,41 +1,41 @@
-$(function() {
-    $("form[name='registration']").validate({
-      // правила проверки
-      rules: {
-        firstname: "required",
-        lastname: "required",
-        email: {
-          required: true,
-          email: true
-        },
-        password: {
-          required: true,
-          minlength: 5
-        },
-        password2: {
-            required: true,
-            minlength: 5
-          }
-      },
-      // мессеж при ошибки
-      messages: {
-        firstname: "пожалуйста введите имя",
-        lastname: "пожалуйста введите фамилию",
-        password: {
-          required: "введите пароль",
-          minlength: "пароль не должен быть менее 5 символов"
-        },
-        password2: {
-            required: "повторите пароль",
-            minlength: "пароль не должен быть менее 5 символов"
-        },
-        email: "введите емайл"
-      },
-      submitHandler: function(form) {
-        form.submit();
-      }
-    });
-  });
+//$(function() {
+//    $("form[name='registration']").validate({
+//      // правила проверки
+//      rules: {
+//        firstname: "required",
+//        lastname: "required",
+//        email: {
+//          required: true,
+//          email: true
+//        },
+//        password: {
+//          required: true,
+//          minlength: 5
+//        },
+//        password2: {
+//            required: true,
+//            minlength: 5
+//          }
+//      },
+//      // мессеж при ошибки
+//      messages: {
+//        firstname: "пожалуйста введите имя",
+//        lastname: "пожалуйста введите фамилию",
+//        password: {
+//          required: "введите пароль",
+//          minlength: "пароль не должен быть менее 5 символов"
+//        },
+//        password2: {
+//            required: "повторите пароль",
+//            minlength: "пароль не должен быть менее 5 символов"
+//        },
+//        email: "введите емайл"
+//      },
+//      submitHandler: function(form) {
+//        form.submit();
+//      }
+//    });
+//  });
 
 $('.product').on('click', function() {
     $('.product').show();
@@ -54,7 +54,7 @@ $('.product_detail .add').on('click', function() {
     let price = detail.find('.price').text();
     let priceInt = parseInt(price);
     let img = detail.find('img').attr('src');
-
+    
     $('#count').text(parseInt($('#count').text()) + 1);
 
     let summa = parseInt($('#summa').text()) + priceInt;
@@ -78,7 +78,7 @@ $('.product_detail .add').on('click', function() {
         let summa = parseInt($('#summa').text()) - priceInt;
         let skidka = Math.ceil(summa * 0.1)
         let itogo = summa - skidka;
-
+        
         $('#summa').text(summa);
         $('#skidka').text(skidka);
         $('#itogo').text(itogo);

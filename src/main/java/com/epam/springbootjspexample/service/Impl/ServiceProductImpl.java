@@ -13,7 +13,6 @@ public class ServiceProductImpl implements ServiceProduct {
 
     @Autowired
     private RepositoryProduct repositoryProduct;
-
     @Override
     public String addProduct(Product product) {
         return null;
@@ -30,16 +29,7 @@ public class ServiceProductImpl implements ServiceProduct {
     }
 
     @Override
-    public Product getProductById() {
-        return repositoryProduct.getProductById();
-    }
-
-    @Override
-    public List<Product> getListProducts() {
-        for (Product product :
-                repositoryProduct.listProducts()) {
-            System.out.println(product);
-        }
+    public List<Product> getlistProducts() {
         return repositoryProduct.listProducts();
     }
 }
