@@ -16,6 +16,7 @@ public class WebConfig implements WebMvcConfigurer {
     public AuthInterceptor authInterceptor() {
         return new AuthInterceptor();
     }
+
     @Bean
     public UserInterceptor userInterceptor() {
         return new UserInterceptor();
@@ -27,7 +28,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(authInterceptor()).addPathPatterns("/*").excludePathPatterns("/css/*","/js/*", "/index","/", "/login");
+        registry.addInterceptor(adminInterceptor()).addPathPatterns("/productCategoryAdmin");
         registry.addInterceptor(userInterceptor()).addPathPatterns("/productCategory");
-        registry.addInterceptor(adminInterceptor()).addPathPatterns("/categoryProductAdmin");
     }
 }

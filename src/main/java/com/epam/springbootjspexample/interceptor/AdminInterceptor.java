@@ -22,10 +22,9 @@ public class AdminInterceptor extends HandlerInterceptorAdapter {
         if (foundUser != null && foundUser.getRole().equals(Role.ADMIN)) {
             return true;
         }
-        else if (foundUser != null){
-            response.sendRedirect("/productCategory");
+        else {
+            response.sendRedirect("/index");
             return false;
         }
-        return true;
     }
 }
