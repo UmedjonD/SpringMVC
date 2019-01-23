@@ -30,9 +30,6 @@ public class ServiceProductImpl implements ServiceProduct {
 
     @Override
     public List<Product> getlistProducts() {
-        for (Product product : repositoryProduct.listProducts()) {
-            System.out.println(product);
-        }
         return repositoryProduct.listProducts();
     }
 }

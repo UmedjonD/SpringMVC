@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Products</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
@@ -84,6 +84,37 @@
 
             <div id="viewed"></div>
 
+             <c:forEach var = "product" items = "${Products}">
+
+                        <div class="product">
+                            <div class="photo"><img src="${product.url}" ></div>
+                            <div class="name-item">"${product.nameBook}"</div>
+                        </div>
+                                <div class="product_detail">
+
+                                    <table style="width: 100%">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <img src="${product.url}">
+
+                                                        </td>
+                                                        <td>
+                                                                <div class="name"><b>"${product.nameBook}"</b></div>
+                                                        </td>
+                                                        <td>"${product.getPrice()}"</td>
+                                                        <td>
+                                                                <div class="price">"${product.price}"</div>
+                                                        </td>
+                                                        <td>
+                                                                <div class="add"> <input type="button" value="Положить в корзину"></div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                    </table>
+                                </div>
+                     </c:forEach>
+<!--
             <div class="product">
                 <div class="photo"><img src="https://i.pinimg.com/736x/46/3e/65/463e652c3397bb53fa7f04593451052a.jpg" ></div>
                 <div class="name-item">Ideal Prohrammer</div>
@@ -608,8 +639,7 @@
          </div>
 
     </div>
-
-    <!--  -->
+  -->
     <br>
     <div class="categories2"><b>Категория Фентези</b></div>
 

@@ -15,11 +15,11 @@ public class UserInterceptor extends HandlerInterceptorAdapter {
     SessionUserService sessionUserService;
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        User foundUser = sessionUserService.getCurrentSessionUser();
-
-        if (Objects.nonNull(foundUser)) {
-            request.setAttribute("user", foundUser);
-        }
+//        User foundUser = sessionUserService.getCurrentSessionUser();
+//
+//        if (Objects.nonNull(foundUser)) {
+//            request.setAttribute("user", foundUser);
+//        }
         return true;
     }
 }

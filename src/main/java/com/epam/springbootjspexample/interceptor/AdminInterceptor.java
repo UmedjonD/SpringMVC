@@ -19,8 +19,11 @@ public class AdminInterceptor extends HandlerInterceptorAdapter {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
         User foundUser = sessionUserService.getCurrentSessionUser();
-        if (Objects.isNull(foundUser) || !foundUser.getRole().equals(Role.ADMIN)) {
-            response.sendRedirect("/index");
+        if (foundUser != null && foundUser.getRole().equals(Role.ADMIN)) {
+            return true;
+        }
+        else if (foundUser != null){
+            response.sendRedirect("/productCategory");
             return false;
         }
         return true;

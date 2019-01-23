@@ -11,6 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 
+
     @Bean
     public AuthInterceptor authInterceptor() {
         return new AuthInterceptor();
@@ -25,8 +26,8 @@ public class WebConfig implements WebMvcConfigurer {
     }
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(authInterceptor()).addPathPatterns("/**").excludePathPatterns("/index", "/categoryProduct");
-        registry.addInterceptor(userInterceptor()).addPathPatterns("/**");
-        registry.addInterceptor(adminInterceptor()).addPathPatterns("/categoryProductAdmin") ;
+        registry.addInterceptor(authInterceptor()).addPathPatterns("/*").excludePathPatterns("/css/*","/js/*", "/index","/", "/login");
+        registry.addInterceptor(userInterceptor()).addPathPatterns("/productCategory");
+        registry.addInterceptor(adminInterceptor()).addPathPatterns("/categoryProductAdmin");
     }
 }

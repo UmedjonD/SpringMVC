@@ -1,5 +1,4 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page isELIgnored ="false" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <html lang="en">
@@ -7,13 +6,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Products</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
     <!-- мое ммя и кнопка для выхода -->
     <div class="myname">
-        <h5>"${user.getLogin()}"</h5>
+        <h5>"${user.login}"</h5>
     </div>
 
     <div class="exit">
@@ -87,24 +86,25 @@
 
         <c:forEach var = "product" items = "${Products}">
 
+            <div class="product">
+                <div class="photo"><img src="${product.url}" ></div>
+                <div class="name-item">"${product.nameBook}"</div>
+            </div>
                     <div class="product_detail">
 
                         <table style="width: 100%">
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <img src= <c:out value ="${product.getUrl()}"/> alt"">
+                                                <img src="${product.url}">
 
                                             </td>
                                             <td>
-                                                    <div class="name"><b><c:out value ="${product.getNameBook()}"/></b></div>
+                                                    <div class="name"><b>"${product.nameBook}"</b></div>
                                             </td>
+                                            <td>"${product.getPrice()}"</td>
                                             <td>
-
-                                                      <c:out value ="${product.getPrice()}"/>
-                                            </td>
-                                            <td>
-                                                    <div class="price"><c:out value ="${product.getNameBook()}"/></div>
+                                                    <div class="price">"${product.price}"</div>
                                             </td>
                                             <td>
                                                     <div class="add"> <input type="button" value="Положить в корзину"></div>
@@ -115,7 +115,7 @@
                     </div>
          </c:forEach>
 
-            <div class="product">
+<!--            <div class="product">
                 <div class="photo"><img src="https://i.pinimg.com/736x/46/3e/65/463e652c3397bb53fa7f04593451052a.jpg" ></div>
                 <div class="name-item">Ideal Prohrammer</div>
             </div>
@@ -931,7 +931,7 @@
                 </tbody>
         </table>
      </div>
-
+-->
     <script src="js/jquery.min.js"></script>
     <script src="js/script.js"></script>
 

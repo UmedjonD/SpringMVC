@@ -1,6 +1,8 @@
 package com.epam.springbootjspexample.controllers;
 
+import com.epam.springbootjspexample.service.ServiceProduct;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Value;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,24 +15,28 @@ import java.util.Map;
 @Controller
 public class WelcomeController {
 
-    @GetMapping("/")
+    @Autowired
+    private ServiceProduct serviceProduct;
+
+    @GetMapping(value = {"/","/index","login"})
     public String welcome() {
         return "index";
     }
-//    @GetMapping("/login")
-//    public String welcome2() {
-//        return "index";
-//    }
+
 //    @GetMapping("/registration")
 //    public String welcome3() {
 //        return "registration";
 //    }
     @GetMapping("/productCategory")
-    public String welcome4() {
-        return "productCategory";
+    public ModelAndView welcome4(ModelAndView modelAndView) {
+        modelAndView = new ModelAndView("productCategory");
+        modelAndView.addObject("Products", serviceProduct.getlistProducts());
+        return modelAndView;
     }
     @GetMapping("/productCategoryAdmin")
-    public String welcome5() {
-        return "productCategoryAdmin";
+    public ModelAndView welcome5(ModelAndView modelAndView) {
+    modelAndView = new ModelAndView("productCategoryAdmin");
+        modelAndView.addObject("Products", serviceProduct.getlistProducts());
+        return modelAndView;
     }
 }

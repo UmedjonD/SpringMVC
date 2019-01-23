@@ -5,16 +5,16 @@ public class Product {
     private int id;
     private String nameBook;
     private int price;
-    private String urt;
+    private String url;
 
     public Product() {
     }
 
-    public Product(int id, String nameBook, int price, String urt) {
+    public Product(int id, String nameBook, int price, String url) {
         this.id = id;
         this.nameBook = nameBook;
         this.price = price;
-        this.urt = urt;
+        this.url = url;
     }
 
     public int getId() {
@@ -41,12 +41,12 @@ public class Product {
         this.price = price;
     }
 
-    public String getUrt() {
-        return urt;
+    public String getUrl() {
+        return url;
     }
 
-    public void setUrt(String urt) {
-        this.urt = urt;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     @Override
@@ -55,7 +55,7 @@ public class Product {
                 "id=" + id +
                 ", nameBook='" + nameBook + '\'' +
                 ", price=" + price +
-                ", urt='" + urt + '\'' +
+                ", url='" + url + '\'' +
                 '}';
     }
 }
