@@ -11,12 +11,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 
-
     @Bean
     public AuthInterceptor authInterceptor() {
         return new AuthInterceptor();
     }
-
     @Bean
     public UserInterceptor userInterceptor() {
         return new UserInterceptor();

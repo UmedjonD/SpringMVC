@@ -1,11 +1,10 @@
-package com.epam.springbootjspexample.service;
+package com.epam.springbootjspexample.repository;
 
 import com.epam.springbootjspexample.dto.Book;
-import com.epam.springbootjspexample.dto.Product;
 
 import java.util.List;
 
-public interface ServiceBook {
+public interface RepositoryBook {
 
     public void addBook(Book book);
 
@@ -16,7 +15,5 @@ public interface ServiceBook {
     public Book getBookId(int id);
 
     public List<Book> listBooks();
-
-//    public void editBook(Book book);
 
 }
